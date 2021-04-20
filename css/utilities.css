@@ -1,0 +1,123 @@
+/* anything we reuse goes here */
+
+/* Text colors */
+.text-primary {
+  color: #28a745;
+}
+
+.text-secondary {
+  color: #0284d0;
+}
+
+
+/* Button */
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary, .bg-primary {
+  background: #28a745;
+  color: #fff;
+}
+.btn-secondary, .bg-secondary {
+  background: #0284d0;
+  color: #fff;
+}
+.btn-dark, .bg-dark {
+  background: #333;
+  color: #fff;
+}
+.btn-light, .bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.btn-outline {
+   background: transparent;
+   border: 1px solid #fff;
+}
+
+.flex-items {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.flex-items div {
+  padding: 10px;
+}
+
+/* flex columns*/
+.flex-columns {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-columns .column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.flex-columns .column2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+}
+
+.flex-columns .column .column1,
+.flex-columns .column .column2 {
+  height: 100%;
+}
+
+.flex-columns .column .column1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.flex-columns h2 {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.flex-columns h4 {
+  margin-bottom: 10px;
+}
+
+.flex-columns p {
+  margin: 20px 0;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+/* section header with center text */
+.section-header {
+  text-align: center;
+  padding: 30px;
+}
+
+.section-header h2 {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.section-padding {
+  padding: 20px 20px 40px;
+}

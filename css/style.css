@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* nav bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #333;
+  color: #fff;
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  padding: 0 30px;
+  transition: 0.5s;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.navbar a:hover {
+  border-bottom: #28a745 2px solid;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar .logo {
+  font-weight: 400;
+}
+
+.navbar.top {
+  background: transparent;
+}
+
+.hero {
+  background: url(../images/home/showcase.jpg) no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+  position: relative;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.hero .content h1 {
+  font-size: 55px;
+}
+
+.hero .content p {
+  font-size: 23px;
+  max-width: 600px;
+  margin: 20px 0;
+}
+
+/* light overlay over image */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero * {
+  z-index: 10;
+}
+
+.hero.blog {
+  background: url('../images/home/blog.jpg') no-repeat center center/cover;
+  height: 30vh;
+}
+
+
+
+/* icons */
+.icons {
+  padding: 30px;
+}
+
+.icons h3 {
+  font-weight: bold;
+}
+
+.icons i {
+  background: #28a745;
+  color: #fff;
+  padding: 16px;
+  border-radius: 50%;
+}
+
+.cases-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 8px;
+}
+
+.cases-body img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.cases-body img:hover {
+  opacity: 0.7;
+}
+
+.team img {
+  border-radius: 50%;
+}
+
+/* Callback form */
+.callback-form {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.callback-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.callback-form .form-control {
+  margin-bottom: 15px;
+}
+
+.callback-form input {
+  width: 100%;
+  padding: 4px;
+  height: 40px;
+  border: #f5f5f5 1px solid;
+}
+
+.callback-form input:focus {
+  outline-color: #28a745;
+}
+
+.callback-form .btn {
+  padding: 12px 0;
+  margin-top: 20px;
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+}
+
+.footer .social a {
+  margin-right: 30px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: #28a745;
+}
+
+/* post */
+.post {
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post h2 {
+  font-size: 40px;
+  width: 100%;
+  align-self: flex-start;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: #333 solid 1px;
+}
+
+.post .meta {
+  margin-bottom: 30px;
+}
+
+.post img {
+  width: 300px;
+  border-radius: 50%;
+  align-self: center;
+  margin: 0 0  30px 0;
+}
+
+
+/* for screen size anything at/below 768px */
+@media(max-width: 768px) {
+  
+  .navbar {
+    flex-direction: column;
+    height: 120px;
+    padding: 20px;
+  }
+ 
+  .navbar a {
+    padding: 10px 10px;
+    margin: 0 3px;
+  }
+
+  .flex-items {
+    flex-direction: column;
+  }
+ 
+  .flex-columns .column {
+    /* since we have flexwrap propery to wrap we do not make flex direction column instaead use flex 100% */
+    flex: 100%; 
+  }
+
+  .cases-body {
+    grid-template-columns: 1fr;
+  }
+  
+  .team img {
+    width: 70%;
+}
+
+}
